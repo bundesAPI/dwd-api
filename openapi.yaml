@@ -45,7 +45,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CROWDMeldug'
+                $ref: '#/components/schemas/CROWDMeldung'
       servers:
         - url: 'https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16/'
 
@@ -349,7 +349,7 @@ components:
               type: string
               format: nullable
 
-    CROWDMeldug:
+    CROWDMeldung:
       type: object
       properties:
         start:
