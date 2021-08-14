@@ -52,7 +52,7 @@ paths:
 
   /warnings_nowcast.json:
     get:
-      summary: Nowcast Warnungen
+      summary: Nowcast Warnungen (deutsch)
       responses:
         '200':
           description: OK
@@ -63,6 +63,18 @@ paths:
       servers:
         - url: 'https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16'
 
+  /warnings_nowcast_en.json:
+    get:
+      summary: Nowcast Warnungen (englisch)
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WarningNowcast'
+      servers:
+        - url: 'https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16'
 
   /gemeinde_warnings_v2_en.json:
     get:
@@ -77,9 +89,23 @@ paths:
       servers:
         - url: 'https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16'
 
+  /warnings_coast.json:
+    get:
+      summary: Küsten Unwetterwarnungen (deutsch)
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WarningCoast'
+      servers:
+        - url: 'https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16'
+
+
   /warnings_coast_en.json:
     get:
-      summary: Küsten Unwetterwarnungen
+      summary: Küsten Unwetterwarnungen (englisch)
       responses:
         '200':
           description: OK
@@ -101,7 +127,6 @@ paths:
             application/text:
               schema:
                 type: string
-
       servers:
         - url: 'https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16'
 
@@ -117,7 +142,6 @@ paths:
             application/text:
               schema:
                 type: string
-
       servers:
         - url: 'https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16'
 
@@ -132,7 +156,6 @@ paths:
             application/json:
               schema:
                 type: string
-
       servers:
         - url: 'https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16'
 
