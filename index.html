@@ -14,7 +14,20 @@
         window.onload = function () {
             const ui = SwaggerUIBundle({
                 url: "openapi.yaml", 
-                dom_id: "#openapi"
+                dom_id: "#openapi",
+                requestInterceptor: function(req) {   
+                    var mapping = {
+                        "app-prod-ws.warnwetter.de": "dwd.api.proxy.bund.dev"
+                    }
+                    if(this.url !== "openapi.yaml") {
+                       var url = new URL(req.url);
+                       if(url.hostname in mapping) {
+                           url.hostname = mapping[url.hostname];
+                           req.url = url.href;
+                       }
+                    }
+                    return req;
+              },
             })
         }
     </script>
