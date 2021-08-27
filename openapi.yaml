@@ -32,6 +32,19 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/StationOverview'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+        '400':
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
       servers:
         - url: 'https://app-prod-ws.warnwetter.de/v30'
 
@@ -46,6 +59,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CROWDMeldung'
+        '404':
+          description: Not Found
       servers:
         - url: 'https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16'
 
@@ -60,6 +75,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/WarningNowcast'
+        '404':
+          description: Not Found
       servers:
         - url: 'https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16'
 
@@ -73,6 +90,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/WarningNowcast'
+        '404':
+          description: Not Found
       servers:
         - url: 'https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16'
 
@@ -86,6 +105,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GemeindeWarnings'
+        '404':
+          description: Not Found
       servers:
         - url: 'https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16'
 
@@ -99,6 +120,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/WarningCoast'
+        '404':
+          description: Not Found
       servers:
         - url: 'https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16'
 
@@ -113,6 +136,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/WarningCoast'
+        '404':
+          description: Not Found
       servers:
         - url: 'https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16'
 
@@ -127,6 +152,8 @@ paths:
             application/text:
               schema:
                 type: string
+        '404':
+          description: Not Found
       servers:
         - url: 'https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16'
 
@@ -142,6 +169,8 @@ paths:
             application/text:
               schema:
                 type: string
+        '404':
+          description: Not Found
       servers:
         - url: 'https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16'
 
@@ -156,6 +185,8 @@ paths:
             application/json:
               schema:
                 type: string
+        '404':
+          description: Not Found
       servers:
         - url: 'https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16'
 
@@ -212,7 +243,7 @@ components:
                 type: boolean
               instruction:
                 type: string
-                format: nullable
+                nullable: true
               description:
                 type: string
               descriptionText:
@@ -223,7 +254,7 @@ components:
                 type: string
         binnenSee:
           type: string
-          format: nullable
+          nullable: true
     StationOverview:
       type: object
       properties:
@@ -253,13 +284,13 @@ components:
                     format: int32
                 windSpeed:
                   type: string
-                  format: nullable
+                  nullable: true
                 windDirection:
                   type: string
-                  format: nullable
+                  nullable: true
                 windGust:
                   type: string
-                  format: nullable
+                  nullable: true
                 icon:
                   type: array
                   items:
@@ -272,10 +303,10 @@ components:
                     format: int32
                 precipitationProbablity:
                   type: string
-                  format: nullable
+                  nullable: true
                 precipitationProbablityIndex:
                   type: string
-                  format: nullable
+                  nullable: true
             forecast2:
               type: object
               properties:
@@ -297,13 +328,13 @@ components:
                     type: number
                 windSpeed:
                   type: string
-                  format: nullable
+                  nullable: true
                 windDirection:
                   type: string
-                  format: nullable
+                  nullable: true
                 windGust:
                   type: string
-                  format: nullable
+                  nullable: true
                 icon:
                   type: array
                   items:
@@ -316,13 +347,13 @@ components:
                     format: int32
                 precipitationProbablity:
                   type: string
-                  format: nullable
+                  nullable: true
                 precipitationProbablityIndex:
                   type: string
-                  format: nullable
+                  nullable: true
             forecastStart:
               type: string
-              format: nullable
+              nullable: true
             days:
               type: array
               items:
@@ -330,7 +361,7 @@ components:
                 properties:
                   stationId:
                     type: string
-                    format: nullable
+                    nullable: true
                   dayDate:
                     type: string
                     format: date
@@ -345,10 +376,10 @@ components:
                     format: int32
                   icon1:
                     type: string
-                    format: nullable
+                    nullable: true
                   icon2:
                     type: string
-                    format: nullable
+                    nullable: true
                   precipitation:
                     type: integer
                     format: int32
@@ -370,7 +401,7 @@ components:
                 type: object
             threeHourSummaries:
               type: string
-              format: nullable
+              nullable: true
 
     CROWDMeldung:
       type: object
@@ -498,6 +529,26 @@ components:
                     type: string
                   headline:
                     type: string
+    Error:
+      type: object
+      properties:
+        timestamp:
+          type: integer
+          format: int64
+          example: 1630077980735
+        status:
+          type: integer
+          format: int32
+          example: 404
+        error:
+          type: string
+          example: Not Found
+        message:
+          type: string
+          example:
+        path:
+          type: string
+          example: /v30/alpen_forecast_text_dwms.json
 
     WarningCoast:
       type: object
@@ -536,4 +587,3 @@ components:
 externalDocs:
   description: "Ausführlichere Dokumentation"
   url: "https://listed.to/@DieSieben/7851/api-des-deutschen-wetterdienstes"
-
