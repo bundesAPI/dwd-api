@@ -545,7 +545,7 @@ components:
           example: Not Found
         message:
           type: string
-          example:
+          example: "An error occured"
         path:
           type: string
           example: /v30/alpen_forecast_text_dwms.json
