@@ -227,7 +227,7 @@ components:
     StationOverview:
       type: object
       properties:
-        10865:
+        "10865":
           type: object
           properties:
             forecast1:
@@ -472,7 +472,7 @@ components:
         binnenSee:
           type: object
           properties:
-            209901000:
+            "209901000":
               type: array
               items:
                 type: object
@@ -508,7 +508,7 @@ components:
         warnings:
           type: object
           properties:
-            501000007:
+            "501000007":
               type: array
               items:
                 type: object
@@ -531,9 +531,6 @@ components:
                     type: string
                   headline:
                     type: string
-        vorabInformation:
-          type: object
-          properties:
 
 
 externalDocs:
