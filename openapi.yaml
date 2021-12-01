@@ -26,6 +26,10 @@ paths:
                 - type: string
                 - type: integer
           example: [10865, G005]
+        - name: stationsKennungen
+          in: query
+          style: form
+          description: "Stationskennungen könen z.B. [hier](https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsliste.html) eingesehen werden"
           explode: false
           schema:
             type: array
