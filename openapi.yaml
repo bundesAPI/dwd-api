@@ -1,7 +1,7 @@
 openapi: "3.0.0"
 info:
   description: "Aktuelle Wetterdaten von allen Deutschen Wetterstationen"
-  version: "1.0.0"
+  version: "1.1.0"
   title: "Deutscher Wetterdienst: API"
 
 servers:
@@ -14,9 +14,22 @@ paths:
       summary: Wetterstation Daten
       parameters:
         - name: stationIds
+          deprecated: true
           in: query
           style: form
-          description: "StationsIDs könen z.B. [hier](https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsliste.html) eingesehen werden"
+          description: "Der Parameter stationIds wird in stationsKennungen umbenannt. Daher ist stationIds als veraltet markiert und wird in einer zukünftigen Version werden. Bitte nur noch den Parameter stationsKennungen verwenden. "
+          explode: false
+          schema:
+            type: array
+            items:
+              oneOf:
+                - type: string
+                - type: integer
+          example: [10865, G005]
+        - name: stationsKennungen
+          in: query
+          style: form
+          description: "Stationskennungen könen z.B. [hier](https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsliste.html) eingesehen werden"
           explode: false
           schema:
             type: array
