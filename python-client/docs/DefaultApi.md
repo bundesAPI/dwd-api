@@ -292,14 +292,13 @@ configuration = dwd.Configuration(
 with dwd.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = default_api.DefaultApi(api_client)
-    station_ids = [10865,"G005"] # [bool, date, datetime, dict, float, int, list, str, none_type] | Der Parameter stationIds wird in stationsKennungen umbenannt. Daher ist stationIds als veraltet markiert und wird in einer zukünftigen Version werden. Bitte nur noch den Parameter stationsKennungen verwenden.  (optional)
-    stations_kennungen = [10865,"G005"] # [bool, date, datetime, dict, float, int, list, str, none_type] | Stationskennungen könen z.B. [hier](https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsliste.html) eingesehen werden (optional)
+    station_ids = [10865,"G005"] # [bool, date, datetime, dict, float, int, list, str, none_type] | Beim Parameter stationsIds handelt es sich um die Stationskennungen. Die List der Stationskennungen kann z.B. [hier](https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsliste.html) eingesehen werden. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Wetterstation Daten
-        api_response = api_instance.station_overview_extended_get(station_ids=station_ids, stations_kennungen=stations_kennungen)
+        api_response = api_instance.station_overview_extended_get(station_ids=station_ids)
         pprint(api_response)
     except dwd.ApiException as e:
         print("Exception when calling DefaultApi->station_overview_extended_get: %s\n" % e)
@@ -310,8 +309,7 @@ with dwd.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **station_ids** | [**[bool, date, datetime, dict, float, int, list, str, none_type]**](bool, date, datetime, dict, float, int, list, str, none_type.md)| Der Parameter stationIds wird in stationsKennungen umbenannt. Daher ist stationIds als veraltet markiert und wird in einer zukünftigen Version werden. Bitte nur noch den Parameter stationsKennungen verwenden.  | [optional]
- **stations_kennungen** | [**[bool, date, datetime, dict, float, int, list, str, none_type]**](bool, date, datetime, dict, float, int, list, str, none_type.md)| Stationskennungen könen z.B. [hier](https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsliste.html) eingesehen werden | [optional]
+ **station_ids** | [**[bool, date, datetime, dict, float, int, list, str, none_type]**](bool, date, datetime, dict, float, int, list, str, none_type.md)| Beim Parameter stationsIds handelt es sich um die Stationskennungen. Die List der Stationskennungen kann z.B. [hier](https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsliste.html) eingesehen werden. | [optional]
 
 ### Return type
 
