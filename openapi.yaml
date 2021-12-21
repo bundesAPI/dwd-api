@@ -95,7 +95,7 @@ paths:
       servers:
         - url: 'https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16'
 
-/gemeinde_warnings_v2.json:
+  /gemeinde_warnings_v2.json:
     get:
       summary: Gemeinde Unwetterwarnungen (Deutsch)
       responses:
