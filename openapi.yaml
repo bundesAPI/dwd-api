@@ -95,9 +95,24 @@ paths:
       servers:
         - url: 'https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16'
 
+  /gemeinde_warnings_v2.json:
+    get:
+      summary: Gemeinde Unwetterwarnungen (Deutsch)
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GemeindeWarnings'
+        '404':
+          description: Not Found
+      servers:
+        - url: 'https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16'
+
   /gemeinde_warnings_v2_en.json:
     get:
-      summary: Gemeinde Unwetterwarnungen
+      summary: Gemeinde Unwetterwarnungen (Englisch)
       responses:
         '200':
           description: OK
