@@ -16,7 +16,7 @@ paths:
         - name: stationIds
           in: query
           style: form
-          description: "Beim Parameter stationsIds handelt es sich um die Stationskennungen. Die List der Stationskennungen kann z.B. [hier](https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsliste.html) eingesehen werden."
+          description: "Beim Parameter stationsIds handelt es sich um die Stationskennungen. Die Liste der Stationskennungen kann z.B. [hier](https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsliste.html) eingesehen werden."
           explode: false
           schema:
             type: array
