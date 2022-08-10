@@ -12,16 +12,15 @@
 import sys
 import unittest
 
-from deutschland.dwd.model.warning_nowcast_regions import WarningNowcastRegions
+from deutschland.dwd.model.warning_nowcast_warnings_inner_regions_inner import (
+    WarningNowcastWarningsInnerRegionsInner,
+)
 
 from deutschland import dwd
 
-globals()["WarningNowcastRegions"] = WarningNowcastRegions
-from deutschland.dwd.model.gemeinde_warnings_warnings import GemeindeWarningsWarnings
 
-
-class TestGemeindeWarningsWarnings(unittest.TestCase):
-    """GemeindeWarningsWarnings unit test stubs"""
+class TestWarningNowcastWarningsInnerRegionsInner(unittest.TestCase):
+    """WarningNowcastWarningsInnerRegionsInner unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +28,10 @@ class TestGemeindeWarningsWarnings(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testGemeindeWarningsWarnings(self):
-        """Test GemeindeWarningsWarnings"""
+    def testWarningNowcastWarningsInnerRegionsInner(self):
+        """Test WarningNowcastWarningsInnerRegionsInner"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = GemeindeWarningsWarnings()  # noqa: E501
+        # model = WarningNowcastWarningsInnerRegionsInner()  # noqa: E501
         pass
 
 

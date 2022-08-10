@@ -31,8 +31,8 @@ from deutschland.dwd.model_utils import (  # noqa: F401
 
 
 def lazy_import():
-    from deutschland.dwd.model.station_overview10865_days import (
-        StationOverview10865Days,
+    from deutschland.dwd.model.station_overview10865_days_inner import (
+        StationOverview10865DaysInner,
     )
     from deutschland.dwd.model.station_overview10865_forecast1 import (
         StationOverview10865Forecast1,
@@ -41,7 +41,7 @@ def lazy_import():
         StationOverview10865Forecast2,
     )
 
-    globals()["StationOverview10865Days"] = StationOverview10865Days
+    globals()["StationOverview10865DaysInner"] = StationOverview10865DaysInner
     globals()["StationOverview10865Forecast1"] = StationOverview10865Forecast1
     globals()["StationOverview10865Forecast2"] = StationOverview10865Forecast2
 
@@ -113,7 +113,7 @@ class StationOverview10865(ModelNormal):
                 str,
                 none_type,
             ),  # noqa: E501
-            "days": ([StationOverview10865Days],),  # noqa: E501
+            "days": ([StationOverview10865DaysInner],),  # noqa: E501
             "warnings": (
                 [{str: (bool, date, datetime, dict, float, int, list, str, none_type)}],
             ),  # noqa: E501
@@ -179,13 +179,13 @@ class StationOverview10865(ModelNormal):
             forecast1 (StationOverview10865Forecast1): [optional]  # noqa: E501
             forecast2 (StationOverview10865Forecast2): [optional]  # noqa: E501
             forecast_start (str, none_type): [optional]  # noqa: E501
-            days ([StationOverview10865Days]): [optional]  # noqa: E501
+            days ([StationOverview10865DaysInner]): [optional]  # noqa: E501
             warnings ([{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]): [optional]  # noqa: E501
             three_hour_summaries (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop("_check_type", True)
-        _spec_property_naming = kwargs.pop("_spec_property_naming", False)
+        _spec_property_naming = kwargs.pop("_spec_property_naming", True)
         _path_to_item = kwargs.pop("_path_to_item", ())
         _configuration = kwargs.pop("_configuration", None)
         _visited_composed_classes = kwargs.pop("_visited_composed_classes", ())
@@ -193,15 +193,19 @@ class StationOverview10865(ModelNormal):
         self = super(OpenApiModel, cls).__new__(cls)
 
         if args:
-            raise ApiTypeError(
-                "Invalid positional arguments=%s passed to %s. Remove those invalid positional arguments."
-                % (
-                    args,
-                    self.__class__.__name__,
-                ),
-                path_to_item=_path_to_item,
-                valid_classes=(self.__class__,),
-            )
+            for arg in args:
+                if isinstance(arg, dict):
+                    kwargs.update(arg)
+                else:
+                    raise ApiTypeError(
+                        "Invalid positional arguments=%s passed to %s. Remove those invalid positional arguments."
+                        % (
+                            args,
+                            self.__class__.__name__,
+                        ),
+                        path_to_item=_path_to_item,
+                        valid_classes=(self.__class__,),
+                    )
 
         self._data_store = {}
         self._check_type = _check_type
@@ -271,7 +275,7 @@ class StationOverview10865(ModelNormal):
             forecast1 (StationOverview10865Forecast1): [optional]  # noqa: E501
             forecast2 (StationOverview10865Forecast2): [optional]  # noqa: E501
             forecast_start (str, none_type): [optional]  # noqa: E501
-            days ([StationOverview10865Days]): [optional]  # noqa: E501
+            days ([StationOverview10865DaysInner]): [optional]  # noqa: E501
             warnings ([{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]): [optional]  # noqa: E501
             three_hour_summaries (str, none_type): [optional]  # noqa: E501
         """
@@ -283,15 +287,19 @@ class StationOverview10865(ModelNormal):
         _visited_composed_classes = kwargs.pop("_visited_composed_classes", ())
 
         if args:
-            raise ApiTypeError(
-                "Invalid positional arguments=%s passed to %s. Remove those invalid positional arguments."
-                % (
-                    args,
-                    self.__class__.__name__,
-                ),
-                path_to_item=_path_to_item,
-                valid_classes=(self.__class__,),
-            )
+            for arg in args:
+                if isinstance(arg, dict):
+                    kwargs.update(arg)
+                else:
+                    raise ApiTypeError(
+                        "Invalid positional arguments=%s passed to %s. Remove those invalid positional arguments."
+                        % (
+                            args,
+                            self.__class__.__name__,
+                        ),
+                        path_to_item=_path_to_item,
+                        valid_classes=(self.__class__,),
+                    )
 
         self._data_store = {}
         self._check_type = _check_type

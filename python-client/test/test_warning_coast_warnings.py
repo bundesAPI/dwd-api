@@ -12,13 +12,13 @@
 import sys
 import unittest
 
-from deutschland.dwd.model.warning_coast_warnings501000007 import (
-    WarningCoastWarnings501000007,
+from deutschland.dwd.model.warning_coast_warnings501000007_inner import (
+    WarningCoastWarnings501000007Inner,
 )
 
 from deutschland import dwd
 
-globals()["WarningCoastWarnings501000007"] = WarningCoastWarnings501000007
+globals()["WarningCoastWarnings501000007Inner"] = WarningCoastWarnings501000007Inner
 from deutschland.dwd.model.warning_coast_warnings import WarningCoastWarnings
 
 

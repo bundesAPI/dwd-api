@@ -12,11 +12,13 @@
 import sys
 import unittest
 
-from deutschland.dwd.model.warning_nowcast_warnings import WarningNowcastWarnings
+from deutschland.dwd.model.warning_nowcast_warnings_inner import (
+    WarningNowcastWarningsInner,
+)
 
 from deutschland import dwd
 
-globals()["WarningNowcastWarnings"] = WarningNowcastWarnings
+globals()["WarningNowcastWarningsInner"] = WarningNowcastWarningsInner
 from deutschland.dwd.model.warning_nowcast import WarningNowcast
 
 

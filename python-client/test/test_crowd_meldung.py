@@ -12,15 +12,17 @@
 import sys
 import unittest
 
-from deutschland.dwd.model.crowd_meldung_highest_severities import (
-    CROWDMeldungHighestSeverities,
+from deutschland.dwd.model.crowd_meldung_highest_severities_inner import (
+    CROWDMeldungHighestSeveritiesInner,
 )
-from deutschland.dwd.model.crowd_meldung_meldungen import CROWDMeldungMeldungen
+from deutschland.dwd.model.crowd_meldung_meldungen_inner import (
+    CROWDMeldungMeldungenInner,
+)
 
 from deutschland import dwd
 
-globals()["CROWDMeldungHighestSeverities"] = CROWDMeldungHighestSeverities
-globals()["CROWDMeldungMeldungen"] = CROWDMeldungMeldungen
+globals()["CROWDMeldungHighestSeveritiesInner"] = CROWDMeldungHighestSeveritiesInner
+globals()["CROWDMeldungMeldungenInner"] = CROWDMeldungMeldungenInner
 from deutschland.dwd.model.crowd_meldung import CROWDMeldung
 
 

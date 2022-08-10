@@ -12,15 +12,15 @@
 import sys
 import unittest
 
-from deutschland.dwd.model.gemeinde_warnings_binnen_see209901000 import (
-    GemeindeWarningsBinnenSee209901000,
+from deutschland.dwd.model.station_overview10865_days_inner import (
+    StationOverview10865DaysInner,
 )
 
 from deutschland import dwd
 
 
-class TestGemeindeWarningsBinnenSee209901000(unittest.TestCase):
-    """GemeindeWarningsBinnenSee209901000 unit test stubs"""
+class TestStationOverview10865DaysInner(unittest.TestCase):
+    """StationOverview10865DaysInner unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestGemeindeWarningsBinnenSee209901000(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testGemeindeWarningsBinnenSee209901000(self):
-        """Test GemeindeWarningsBinnenSee209901000"""
+    def testStationOverview10865DaysInner(self):
+        """Test StationOverview10865DaysInner"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = GemeindeWarningsBinnenSee209901000()  # noqa: E501
+        # model = StationOverview10865DaysInner()  # noqa: E501
         pass
 
 

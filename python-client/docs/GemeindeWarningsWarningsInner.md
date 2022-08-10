@@ -1,4 +1,4 @@
-# WarningNowcastWarnings
+# GemeindeWarningsWarningsInner
 
 
 ## Properties
@@ -8,12 +8,10 @@ Name | Type | Description | Notes
 **level** | **int** |  | [optional] 
 **start** | **int** |  | [optional] 
 **end** | **int** |  | [optional] 
-**states** | **[float]** |  | [optional] 
-**regions** | [**[WarningNowcastRegions]**](WarningNowcastRegions.md) |  | [optional] 
-**urls** | **[str]** |  | [optional] 
+**regions** | [**[WarningNowcastWarningsInnerRegionsInner]**](WarningNowcastWarningsInnerRegionsInner.md) |  | [optional] 
+**urls** | **[{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]** |  | [optional] 
 **bn** | **bool** |  | [optional] 
 **is_vorabinfo** | **bool** |  | [optional] 
-**instruction** | **str, none_type** |  | [optional] 
 **description** | **str** |  | [optional] 
 **description_text** | **str** |  | [optional] 
 **event** | **str** |  | [optional] 

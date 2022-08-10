@@ -13,12 +13,14 @@ import sys
 import unittest
 
 from deutschland.dwd.model.gemeinde_warnings_binnen_see import GemeindeWarningsBinnenSee
-from deutschland.dwd.model.gemeinde_warnings_warnings import GemeindeWarningsWarnings
+from deutschland.dwd.model.gemeinde_warnings_warnings_inner import (
+    GemeindeWarningsWarningsInner,
+)
 
 from deutschland import dwd
 
 globals()["GemeindeWarningsBinnenSee"] = GemeindeWarningsBinnenSee
-globals()["GemeindeWarningsWarnings"] = GemeindeWarningsWarnings
+globals()["GemeindeWarningsWarningsInner"] = GemeindeWarningsWarningsInner
 from deutschland.dwd.model.gemeinde_warnings import GemeindeWarnings
 
 

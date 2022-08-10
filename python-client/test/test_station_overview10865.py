@@ -12,7 +12,9 @@
 import sys
 import unittest
 
-from deutschland.dwd.model.station_overview10865_days import StationOverview10865Days
+from deutschland.dwd.model.station_overview10865_days_inner import (
+    StationOverview10865DaysInner,
+)
 from deutschland.dwd.model.station_overview10865_forecast1 import (
     StationOverview10865Forecast1,
 )
@@ -22,7 +24,7 @@ from deutschland.dwd.model.station_overview10865_forecast2 import (
 
 from deutschland import dwd
 
-globals()["StationOverview10865Days"] = StationOverview10865Days
+globals()["StationOverview10865DaysInner"] = StationOverview10865DaysInner
 globals()["StationOverview10865Forecast1"] = StationOverview10865Forecast1
 globals()["StationOverview10865Forecast2"] = StationOverview10865Forecast2
 from deutschland.dwd.model.station_overview10865 import StationOverview10865

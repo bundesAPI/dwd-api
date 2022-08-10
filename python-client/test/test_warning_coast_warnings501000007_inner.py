@@ -12,13 +12,15 @@
 import sys
 import unittest
 
-from deutschland.dwd.model.crowd_meldung_meldungen import CROWDMeldungMeldungen
+from deutschland.dwd.model.warning_coast_warnings501000007_inner import (
+    WarningCoastWarnings501000007Inner,
+)
 
 from deutschland import dwd
 
 
-class TestCROWDMeldungMeldungen(unittest.TestCase):
-    """CROWDMeldungMeldungen unit test stubs"""
+class TestWarningCoastWarnings501000007Inner(unittest.TestCase):
+    """WarningCoastWarnings501000007Inner unit test stubs"""
 
     def setUp(self):
         pass
@@ -26,10 +28,10 @@ class TestCROWDMeldungMeldungen(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testCROWDMeldungMeldungen(self):
-        """Test CROWDMeldungMeldungen"""
+    def testWarningCoastWarnings501000007Inner(self):
+        """Test WarningCoastWarnings501000007Inner"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = CROWDMeldungMeldungen()  # noqa: E501
+        # model = WarningCoastWarnings501000007Inner()  # noqa: E501
         pass
 
 

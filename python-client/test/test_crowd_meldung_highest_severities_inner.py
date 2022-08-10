@@ -12,15 +12,15 @@
 import sys
 import unittest
 
-from deutschland.dwd.model.crowd_meldung_highest_severities import (
-    CROWDMeldungHighestSeverities,
+from deutschland.dwd.model.crowd_meldung_highest_severities_inner import (
+    CROWDMeldungHighestSeveritiesInner,
 )
 
 from deutschland import dwd
 
 
-class TestCROWDMeldungHighestSeverities(unittest.TestCase):
-    """CROWDMeldungHighestSeverities unit test stubs"""
+class TestCROWDMeldungHighestSeveritiesInner(unittest.TestCase):
+    """CROWDMeldungHighestSeveritiesInner unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestCROWDMeldungHighestSeverities(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testCROWDMeldungHighestSeverities(self):
-        """Test CROWDMeldungHighestSeverities"""
+    def testCROWDMeldungHighestSeveritiesInner(self):
+        """Test CROWDMeldungHighestSeveritiesInner"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = CROWDMeldungHighestSeverities()  # noqa: E501
+        # model = CROWDMeldungHighestSeveritiesInner()  # noqa: E501
         pass
 
 

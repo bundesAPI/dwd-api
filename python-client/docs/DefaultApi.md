@@ -280,6 +280,7 @@ from deutschland import dwd
 from deutschland.dwd.api import default_api
 from deutschland.dwd.model.station_overview import StationOverview
 from deutschland.dwd.model.error import Error
+from deutschland.dwd.model.station_overview_extended_get_station_ids_parameter_inner import StationOverviewExtendedGetStationIdsParameterInner
 from pprint import pprint
 # Defining the host is optional and defaults to https://app-prod-ws.warnwetter.de/v30
 # See configuration.py for a list of all supported configuration parameters.
@@ -292,7 +293,9 @@ configuration = dwd.Configuration(
 with dwd.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = default_api.DefaultApi(api_client)
-    station_ids = [10865,"G005"] # [bool, date, datetime, dict, float, int, list, str, none_type] | Beim Parameter stationsIds handelt es sich um die Stationskennungen. Die List der Stationskennungen kann z.B. [hier](https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsliste.html) eingesehen werden. (optional)
+    station_ids = [
+        StationOverviewExtendedGetStationIdsParameterInner(None),
+    ] # [StationOverviewExtendedGetStationIdsParameterInner] | Beim Parameter stationsIds handelt es sich um die Stationskennungen. Die Liste der Stationskennungen kann z.B. [hier](https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsliste.html) eingesehen werden. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -309,7 +312,7 @@ with dwd.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **station_ids** | [**[bool, date, datetime, dict, float, int, list, str, none_type]**](bool, date, datetime, dict, float, int, list, str, none_type.md)| Beim Parameter stationsIds handelt es sich um die Stationskennungen. Die List der Stationskennungen kann z.B. [hier](https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsliste.html) eingesehen werden. | [optional]
+ **station_ids** | [**[StationOverviewExtendedGetStationIdsParameterInner]**](StationOverviewExtendedGetStationIdsParameterInner.md)| Beim Parameter stationsIds handelt es sich um die Stationskennungen. Die Liste der Stationskennungen kann z.B. [hier](https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsliste.html) eingesehen werden. | [optional]
 
 ### Return type
 

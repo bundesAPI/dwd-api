@@ -12,18 +12,18 @@ dwd.model.crowd\_meldung module
    :undoc-members:
    :show-inheritance:
 
-dwd.model.crowd\_meldung\_highest\_severities module
-----------------------------------------------------
+dwd.model.crowd\_meldung\_highest\_severities\_inner module
+-----------------------------------------------------------
 
-.. automodule:: dwd.model.crowd_meldung_highest_severities
+.. automodule:: dwd.model.crowd_meldung_highest_severities_inner
    :members:
    :undoc-members:
    :show-inheritance:
 
-dwd.model.crowd\_meldung\_meldungen module
-------------------------------------------
+dwd.model.crowd\_meldung\_meldungen\_inner module
+-------------------------------------------------
 
-.. automodule:: dwd.model.crowd_meldung_meldungen
+.. automodule:: dwd.model.crowd_meldung_meldungen_inner
    :members:
    :undoc-members:
    :show-inheritance:
@@ -52,18 +52,18 @@ dwd.model.gemeinde\_warnings\_binnen\_see module
    :undoc-members:
    :show-inheritance:
 
-dwd.model.gemeinde\_warnings\_binnen\_see209901000 module
----------------------------------------------------------
+dwd.model.gemeinde\_warnings\_binnen\_see209901000\_inner module
+----------------------------------------------------------------
 
-.. automodule:: dwd.model.gemeinde_warnings_binnen_see209901000
+.. automodule:: dwd.model.gemeinde_warnings_binnen_see209901000_inner
    :members:
    :undoc-members:
    :show-inheritance:
 
-dwd.model.gemeinde\_warnings\_warnings module
----------------------------------------------
+dwd.model.gemeinde\_warnings\_warnings\_inner module
+----------------------------------------------------
 
-.. automodule:: dwd.model.gemeinde_warnings_warnings
+.. automodule:: dwd.model.gemeinde_warnings_warnings_inner
    :members:
    :undoc-members:
    :show-inheritance:
@@ -84,10 +84,10 @@ dwd.model.station\_overview10865 module
    :undoc-members:
    :show-inheritance:
 
-dwd.model.station\_overview10865\_days module
----------------------------------------------
+dwd.model.station\_overview10865\_days\_inner module
+----------------------------------------------------
 
-.. automodule:: dwd.model.station_overview10865_days
+.. automodule:: dwd.model.station_overview10865_days_inner
    :members:
    :undoc-members:
    :show-inheritance:
@@ -108,6 +108,14 @@ dwd.model.station\_overview10865\_forecast2 module
    :undoc-members:
    :show-inheritance:
 
+dwd.model.station\_overview\_extended\_get\_station\_ids\_parameter\_inner module
+---------------------------------------------------------------------------------
+
+.. automodule:: dwd.model.station_overview_extended_get_station_ids_parameter_inner
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 dwd.model.warning\_coast module
 -------------------------------
 
@@ -124,10 +132,10 @@ dwd.model.warning\_coast\_warnings module
    :undoc-members:
    :show-inheritance:
 
-dwd.model.warning\_coast\_warnings501000007 module
---------------------------------------------------
+dwd.model.warning\_coast\_warnings501000007\_inner module
+---------------------------------------------------------
 
-.. automodule:: dwd.model.warning_coast_warnings501000007
+.. automodule:: dwd.model.warning_coast_warnings501000007_inner
    :members:
    :undoc-members:
    :show-inheritance:
@@ -140,18 +148,18 @@ dwd.model.warning\_nowcast module
    :undoc-members:
    :show-inheritance:
 
-dwd.model.warning\_nowcast\_regions module
-------------------------------------------
+dwd.model.warning\_nowcast\_warnings\_inner module
+--------------------------------------------------
 
-.. automodule:: dwd.model.warning_nowcast_regions
+.. automodule:: dwd.model.warning_nowcast_warnings_inner
    :members:
    :undoc-members:
    :show-inheritance:
 
-dwd.model.warning\_nowcast\_warnings module
--------------------------------------------
+dwd.model.warning\_nowcast\_warnings\_inner\_regions\_inner module
+------------------------------------------------------------------
 
-.. automodule:: dwd.model.warning_nowcast_warnings
+.. automodule:: dwd.model.warning_nowcast_warnings_inner_regions_inner
    :members:
    :undoc-members:
    :show-inheritance:
