@@ -12,7 +12,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: "Lint file"
-        uses: stoplightio/spectral-action@v0.8.1
+        uses: stoplightio/spectral-action@v0.8.2
         with:
             file_glob: "openapi.yaml"
 
