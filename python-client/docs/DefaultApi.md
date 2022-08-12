@@ -6,7 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**alpen_forecast_text_dwms_json_get**](DefaultApi.md#alpen_forecast_text_dwms_json_get) | **GET** /alpen_forecast_text_dwms.json | Alpen Wettervorhersage als Text
 [**crowd_meldungen_overview_v2_json_get**](DefaultApi.md#crowd_meldungen_overview_v2_json_get) | **GET** /crowd_meldungen_overview_v2.json | DWD Crowdwettermeldungen
-[**gemeinde_warnings_v2_en_json_get**](DefaultApi.md#gemeinde_warnings_v2_en_json_get) | **GET** /gemeinde_warnings_v2_en.json | Gemeinde Unwetterwarnungen
+[**gemeinde_warnings_v2_en_json_get**](DefaultApi.md#gemeinde_warnings_v2_en_json_get) | **GET** /gemeinde_warnings_v2_en.json | Gemeinde Unwetterwarnungen (Englisch)
+[**gemeinde_warnings_v2_json_get**](DefaultApi.md#gemeinde_warnings_v2_json_get) | **GET** /gemeinde_warnings_v2.json | Gemeinde Unwetterwarnungen (Deutsch)
 [**sea_warning_text_json_get**](DefaultApi.md#sea_warning_text_json_get) | **GET** /sea_warning_text.json | Hochsee Unwetterwarnungen als Text
 [**station_overview_extended_get**](DefaultApi.md#station_overview_extended_get) | **GET** /stationOverviewExtended | Wetterstation Daten
 [**warnings_coast_en_json_get**](DefaultApi.md#warnings_coast_en_json_get) | **GET** /warnings_coast_en.json | Küsten Unwetterwarnungen (englisch)
@@ -144,7 +145,7 @@ No authorization required
 # **gemeinde_warnings_v2_en_json_get**
 > GemeindeWarnings gemeinde_warnings_v2_en_json_get()
 
-Gemeinde Unwetterwarnungen
+Gemeinde Unwetterwarnungen (Englisch)
 
 ### Example
 
@@ -169,11 +170,73 @@ with dwd.ApiClient() as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # Gemeinde Unwetterwarnungen
+        # Gemeinde Unwetterwarnungen (Englisch)
         api_response = api_instance.gemeinde_warnings_v2_en_json_get()
         pprint(api_response)
     except dwd.ApiException as e:
         print("Exception when calling DefaultApi->gemeinde_warnings_v2_en_json_get: %s\n" % e)
+```
+
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GemeindeWarnings**](GemeindeWarnings.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
+**404** | Not Found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **gemeinde_warnings_v2_json_get**
+> GemeindeWarnings gemeinde_warnings_v2_json_get()
+
+Gemeinde Unwetterwarnungen (Deutsch)
+
+### Example
+
+
+```python
+import time
+from deutschland import dwd
+from deutschland.dwd.api import default_api
+from deutschland.dwd.model.gemeinde_warnings import GemeindeWarnings
+from pprint import pprint
+# Defining the host is optional and defaults to https://app-prod-ws.warnwetter.de/v30
+# See configuration.py for a list of all supported configuration parameters.
+configuration = dwd.Configuration(
+    host = "https://app-prod-ws.warnwetter.de/v30"
+)
+
+
+# Enter a context with an instance of the API client
+with dwd.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+
+    # example, this endpoint has no required or optional parameters
+    try:
+        # Gemeinde Unwetterwarnungen (Deutsch)
+        api_response = api_instance.gemeinde_warnings_v2_json_get()
+        pprint(api_response)
+    except dwd.ApiException as e:
+        print("Exception when calling DefaultApi->gemeinde_warnings_v2_json_get: %s\n" % e)
 ```
 
 

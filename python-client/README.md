@@ -86,7 +86,8 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**alpen_forecast_text_dwms_json_get**](docs/DefaultApi.md#alpen_forecast_text_dwms_json_get) | **GET** /alpen_forecast_text_dwms.json | Alpen Wettervorhersage als Text
 *DefaultApi* | [**crowd_meldungen_overview_v2_json_get**](docs/DefaultApi.md#crowd_meldungen_overview_v2_json_get) | **GET** /crowd_meldungen_overview_v2.json | DWD Crowdwettermeldungen
-*DefaultApi* | [**gemeinde_warnings_v2_en_json_get**](docs/DefaultApi.md#gemeinde_warnings_v2_en_json_get) | **GET** /gemeinde_warnings_v2_en.json | Gemeinde Unwetterwarnungen
+*DefaultApi* | [**gemeinde_warnings_v2_en_json_get**](docs/DefaultApi.md#gemeinde_warnings_v2_en_json_get) | **GET** /gemeinde_warnings_v2_en.json | Gemeinde Unwetterwarnungen (Englisch)
+*DefaultApi* | [**gemeinde_warnings_v2_json_get**](docs/DefaultApi.md#gemeinde_warnings_v2_json_get) | **GET** /gemeinde_warnings_v2.json | Gemeinde Unwetterwarnungen (Deutsch)
 *DefaultApi* | [**sea_warning_text_json_get**](docs/DefaultApi.md#sea_warning_text_json_get) | **GET** /sea_warning_text.json | Hochsee Unwetterwarnungen als Text
 *DefaultApi* | [**station_overview_extended_get**](docs/DefaultApi.md#station_overview_extended_get) | **GET** /stationOverviewExtended | Wetterstation Daten
 *DefaultApi* | [**warnings_coast_en_json_get**](docs/DefaultApi.md#warnings_coast_en_json_get) | **GET** /warnings_coast_en.json | Küsten Unwetterwarnungen (englisch)

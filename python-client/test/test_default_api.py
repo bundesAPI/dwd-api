@@ -42,7 +42,14 @@ class TestDefaultApi(unittest.TestCase):
     def test_gemeinde_warnings_v2_en_json_get(self):
         """Test case for gemeinde_warnings_v2_en_json_get
 
-        Gemeinde Unwetterwarnungen  # noqa: E501
+        Gemeinde Unwetterwarnungen (Englisch)  # noqa: E501
+        """
+        pass
+
+    def test_gemeinde_warnings_v2_json_get(self):
+        """Test case for gemeinde_warnings_v2_json_get
+
+        Gemeinde Unwetterwarnungen (Deutsch)  # noqa: E501
         """
         pass
 
