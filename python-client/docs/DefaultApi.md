@@ -358,7 +358,7 @@ with dwd.ApiClient() as api_client:
     api_instance = default_api.DefaultApi(api_client)
     station_ids = [
         StationOverviewExtendedGetStationIdsParameterInner(None),
-    ] # [StationOverviewExtendedGetStationIdsParameterInner] | Beim Parameter stationsIds handelt es sich um die Stationskennungen. Die Liste der Stationskennungen kann z.B. [hier](https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsliste.html) eingesehen werden. (optional)
+    ] # [StationOverviewExtendedGetStationIdsParameterInner] | Beim Parameter stationsIds handelt es sich um die Stationskennungen des DWD. Die Liste der Stationskennungen kann z.B. [hier](https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsliste.html) eingesehen werden. (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -375,7 +375,7 @@ with dwd.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **station_ids** | [**[StationOverviewExtendedGetStationIdsParameterInner]**](StationOverviewExtendedGetStationIdsParameterInner.md)| Beim Parameter stationsIds handelt es sich um die Stationskennungen. Die Liste der Stationskennungen kann z.B. [hier](https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsliste.html) eingesehen werden. | [optional]
+ **station_ids** | [**[StationOverviewExtendedGetStationIdsParameterInner]**](StationOverviewExtendedGetStationIdsParameterInner.md)| Beim Parameter stationsIds handelt es sich um die Stationskennungen des DWD. Die Liste der Stationskennungen kann z.B. [hier](https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsliste.html) eingesehen werden. | [optional]
 
 ### Return type
 

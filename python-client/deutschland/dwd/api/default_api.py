@@ -1,7 +1,7 @@
 """
     Deutscher Wetterdienst: API
 
-    Aktuelle Wetterdaten von allen Deutschen Wetterstationen  # noqa: E501
+    API des Deutschen Wetterdienstes (DWD) aus der DWD App. <br><br> Neben unterschiedlichen Wetterwarnungen (s.u.) lassen sich unter [/dwd.api.proxy.bund.dev/v30/stationOverviewExtended](/dwd.api.proxy.bund.dev/v30/stationOverviewExtended) nach Angabe des Parameters *stationIDs* (z.B. 'G005') auch die Wetterdaten ausgewählter Wetterstationen anfordern (wobei die sog. 'Stationskennung' des DWD anzugeben ist). <br><br> Unter [https://opendata.dwd.de/](https://opendata.dwd.de/) bietet der DWD darüber hinaus auch aktuelle und historische Daten zu diversen Wetterdaten zum Download an (vgl. hierzu die offizielle Dokumentation [hier](https://opendata.dwd.de/climate_environment/CDC/Readme_intro_CDC_ftp.pdf)). In diesem Zusammenhang erwähnenswert ist auch eine weitere offizielle Liste aller Wetterstationen (ohne Stationskennung aber mit sog. 'Stations_id') [hier](https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/daily/kl/recent/KL_Tageswerte_Beschreibung_Stationen.txt).  # noqa: E501
 
     The version of the OpenAPI document: 1.2.0
     Contact: kontakt@bund.dev
@@ -757,7 +757,7 @@ class DefaultApi(object):
 
 
         Keyword Args:
-            station_ids ([StationOverviewExtendedGetStationIdsParameterInner]): Beim Parameter stationsIds handelt es sich um die Stationskennungen. Die Liste der Stationskennungen kann z.B. [hier](https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsliste.html) eingesehen werden.. [optional]
+            station_ids ([StationOverviewExtendedGetStationIdsParameterInner]): Beim Parameter stationsIds handelt es sich um die Stationskennungen des DWD. Die Liste der Stationskennungen kann z.B. [hier](https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsliste.html) eingesehen werden.. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
