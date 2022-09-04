@@ -7,7 +7,7 @@ auch die Wetterdaten ausgewählter Wetterstationen anfordern (wobei die sog. "St
 
 Die Liste der benötigten Stationskennungen kann z.B. [hier](https://www.dwd.de/DE/leistungen/klimadatendeutschland/stationsliste.html) recherchiert werden. Im HTML-Format findet sie sich [hier](https://www.dwd.de/DE/leistungen/klimadatendeutschland/statliste/statlex_html.html?view=nasPublication&nn=16102)
 
-Unter [https://opendata.dwd.de/](https://opendata.dwd.de/) bietet der DWD darüber hinaus auch aktuelle und historische Daten zu diversen Wetterdaten im zip-Format zum Download an (vgl. hierzu die offizielle Dokumentation [hier](https://opendata.dwd.de/climate_environment/CDC/Readme_intro_CDC_ftp.pdf)). In diesem Zusammenhang erwähnenswert ist auch eine weitere offizielle Liste aller Wetterstationen (ohne Stationskennung aber mit sog. "Stations_id") [hier](https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/daily/kl/recent/KL_Tageswerte_Beschreibung_Stationen.txt).
+Unter [https://opendata.dwd.de/](https://opendata.dwd.de/) bietet der DWD darüber hinaus auch aktuelle und historische Daten zu diversen Wetter- und Kimaphänomenen zum Download an (vgl. hierzu die offizielle Dokumentation [hier](https://opendata.dwd.de/climate_environment/CDC/Readme_intro_CDC_ftp.pdf)). In diesem Zusammenhang erwähnenswert ist auch eine weitere offizielle Liste aller Wetterstationen (ohne Stationskennung aber mit sog. "Stations_id") [hier](https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/daily/kl/recent/KL_Tageswerte_Beschreibung_Stationen.txt).
 
 
 ## Hinweis zu Einheiten
