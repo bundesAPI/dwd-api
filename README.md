@@ -14,11 +14,19 @@ Unter [https://opendata.dwd.de/](https://opendata.dwd.de/) bietet der DWD darüb
 
 Im Folgenden ist eine unvollständige Tabelle angegeben, mit ein paar Einheiten für die Werte, welche die DWD API zurückgibt. Sie wurde ermittelt durch ausprobieren und schauen was Sinn ergibt und dem entspricht, was die DWD App anzeigt. Wenn ihr mehr herausfindet, ergänzt die Tabelle gerne.
 
-| Parameter     | Einheit | Kommentar                                                                                                            |
-|---------------|---------|----------------------------------------------------------------------------------------------------------------------|
-| `temperature` | 0.1 °C  | Temperatur in zehntel Grad Celisus                                                                                   |
-| `start`       | ms      | [Unixzeit](https://de.wikipedia.org/wiki/Unixzeit) in Millisekunden, bei denen die Zeitreihe von Messwerten anfängt. |
-| `timeStep`    | ms      | Zeitintervall zwischen den Messwerten einer Zeitreihe in Millisekunden.                                              |
+| Parameter           | Einheit   | Kommentar                                                                                                                       |
+|---------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------|
+| `temperature`       | 0.1 °C    | Temperatur in zehntel Grad Celisus                                                                                              |
+| `start`             | ms        | [Unixzeit](https://de.wikipedia.org/wiki/Unixzeit) in Millisekunden, bei denen die Zeitreihe von Messwerten anfängt.            |
+| `timeStep`          | ms        | Zeitintervall zwischen den Messwerten einer Zeitreihe in Millisekunden.                                                         |
+| `precipitationTotal`| 0.1 mm/h  | Niederschlagsmenge zehntel Milimeter pro Stunde                                                                                 |
+| `precipitation`     | 0.1 mm/d  | Niederschlagsmenge in zehntel Milimeter pro Tag                                                                                 |
+| `sunshine`          | 0.1 min   | Sonnenscheindauer in $.stationID.days.[0..9].sunshine in zehntel Minuten/d, vermutlich auch in $.stationID.forecast1.sunshine   |
+| `humidity`          | 0.1 %     | Relative Luftfeuchtigkeit in zehntel Prozent RH                                                                                 |
+| `dewPoint2m`        | 0.1 °C    | Taupunkt in zehntel Grad Celsius 2 m über dem Boden                                                                             |
+| `surfacePressure`   | 0.1 hPa   | Luftdruck in zehntel hPa auf Bodenhöhe                                                                                          |
+
+
 
 
 ### Beispiele
